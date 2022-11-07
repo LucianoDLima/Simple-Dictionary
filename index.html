@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts / fontawesome for icons / then js for the project -->
+    <script src="https://kit.fontawesome.com/05d094f421.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="title-wrapper">
+            <h1><span>Simple</span>Dictionary</h1>
+
+            <div class="theme-icon">
+                <!-- <i data-darkTheme="inactive" class="fa-regular fa-moon inactive"></i> -->
+                <i class="fa-regular fa-lightbulb inactive"></i>
+                <!-- <i data-darkTheme="active" class="fa-solid fa-moon inactive"></i> -->
+                <i class="fa-solid fa-lightbulb"></i>
+                <!-- <i data-lightTheme="inactive" class="fa-regular fa-sun"></i> -->
+                <!-- <i data-lightTheme="active" class="fa-solid fa-sun inactive"></i> -->
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <label for="inputWord"><i class="fa-solid fa-magnifying-glass searching-icon"></i></label>
+            <input class="searching-input" id="inputWord" type="text">
+            <button class="searching-button" id="inputButton">Search</button>
+        </div>
+        
+        <h1 id="theWord"></h1>
+    </main>
+</body>
+</html>
