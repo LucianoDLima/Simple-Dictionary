@@ -10,6 +10,10 @@ button, input {
     font-family: inherit;
 }
 
+ul, li {
+    list-style: none;
+}
+
 :root {
     /* Colors */
     --clr-background-primary: hsl(229, 95%, 98%);
@@ -17,19 +21,22 @@ button, input {
     --clr-background-alt: rgb(0, 140, 255);
     --clr-text-primary: hsl(217, 30%, 50%);
     --clr-text-secondary: hsl(0, 0%, 100%);
+    --clr-text-against-bg-sec-primary: hsl(249, 96%, 36%);
+    --clr-accessibility-highlight: hsl(39, 100%, 50%);
 
     /* Shadow */
     --sdw-background: 0 .15rem .3rem .1rem hsla(217, 30%, 50%, .1);
 
     /* Sizes */
-    --inline-space: 1.5rem
+    --inline-space: 1.5rem;
+    --br-bg-secondary: .5rem;
 }
 
 body {
     background-color: var(--clr-background-primary);
     font-family: 'Prompt', sans-serif;
+    padding-inline: var(--inline-space);
 }
-
 main {
     display: flex;
     flex-direction: column;
@@ -45,7 +52,6 @@ main {
     justify-content: space-between;
     width: 100%;
     color: var(--clr-text-primary);
-    padding-inline: var(--inline-space);
     margin-bottom: 1rem;
 }
 
@@ -77,12 +83,13 @@ main {
 .theme-icon i {
     color: rgb(31, 53, 78);
 }
+
 /* Input style */
 
 .input-wrapper {
     width: 100%;
-    padding-inline: var(--inline-space);
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .searching-input {
@@ -93,6 +100,8 @@ main {
     border: none;
     padding-inline: 3rem;
     box-shadow: var(--sdw-background);
+    background-color: var(--clr-background-secondary);
+    color: var(--clr-text-against-bg-sec-primary);
 }
 
 .searching-icon {
@@ -100,7 +109,7 @@ main {
     scale: 1.25;
     top: 50%;
     transform: translateY(calc(-50% + 3px));
-    left: 45px;
+    left: 25px;
     color: var(--clr-background-alt);
 }
 
@@ -108,9 +117,9 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 30px;
+    right: 8px;
     padding: .45rem .75rem;
-    border-radius: .5rem;
+    border-radius: var(--br-bg-secondary);
     border: none;
     background-color: rgb(0, 140, 255);
     color: var(--clr-text-secondary);
@@ -123,4 +132,47 @@ main {
 
 .searching-button:active {
     scale: .98;
+}
+
+/* The container for the api fetch */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: var(--inline-space);
+    margin-inline: var(--inline-space);
+    box-shadow: var(--sdw-background);
+    background-color: var(--clr-background-secondary);
+    border-radius: var(--br-bg-secondary);
+}
+
+.content-wrapper h2 {
+    color: var(--clr-text-against-bg-sec-primary);
+    text-transform: capitalize;
+}
+
+.sub-word {
+    display: flex;
+    gap: 1rem;
+    font-size: .8rem;
+    text-transform: lowercase;
+    font-style: italic;
+    opacity: .8;
+    margin-bottom: 1rem;
+}
+
+.example-wrapper h3 {
+    color: var(--clr-text-primary);
+    margin-bottom: .45rem;
+}
+
+.examples {
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+}
+
+.examples blockquote {
+    font-size: .95rem;
 }

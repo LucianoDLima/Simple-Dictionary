@@ -17,12 +17,8 @@
             <h1><span>Simple</span>Dictionary</h1>
 
             <div class="theme-icon">
-                <!-- <i data-darkTheme="inactive" class="fa-regular fa-moon inactive"></i> -->
                 <i class="fa-regular fa-lightbulb inactive"></i>
-                <!-- <i data-darkTheme="active" class="fa-solid fa-moon inactive"></i> -->
                 <i class="fa-solid fa-lightbulb"></i>
-                <!-- <i data-lightTheme="inactive" class="fa-regular fa-sun"></i> -->
-                <!-- <i data-lightTheme="active" class="fa-solid fa-sun inactive"></i> -->
             </div>
         </div>
 
@@ -32,7 +28,30 @@
             <button class="searching-button" id="inputButton">Search</button>
         </div>
         
-        <h1 id="theWord"></h1>
+        <article class="content-wrapper">
+            <div class="result-wrapper">
+                <h2 data-title>Word</h2>
+                <div class="sub-word">
+                    <p id="type-of-word" class="type-of-word">Type</p>
+                    <p id="phonetic">/ Phonetic /</p>
+                </div>
+                <div class="example-wrapper">
+                    <h3>Meaning of the word</h3>
+                    <ul class="examples">
+                        <li>
+                            <blockquote>"Lorem ipsum, dolor sit amet consectetur adipisicing."</blockquote>
+                        </li>
+                        <li>
+                            <blockquote>"Lorem ipsum dolor sit."</blockquote>
+                        </li>
+                        <li>
+                            <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti eius odit."</blockquote>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        
     </main>
 </body>
 </html>
